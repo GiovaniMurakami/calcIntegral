@@ -44,8 +44,8 @@ int main() {
   do {
     printf("\n");
     printf("==================================================================\n");
-    printf("Seja bem-vindo(a) a calculadora de Integrais!\n");
-    printf("Selecione as opções de 1 a 3\n");
+    printf("INTEGRAL DEFINIDA DE f(x) DE a ATE b\n");
+    printf("Selecione uma das opções: 1 a 3\n");
     printf("==================================================================\n");
     printf("1.Integral de f(x) = x^k\n");
     printf("2.Integral de f(x) = 1/x\n");
