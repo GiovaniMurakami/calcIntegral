@@ -14,7 +14,23 @@
 float a, b, k;
 int escolha;
 
+void integrate1X(float a, float b) {
+  if (a * b <= 0) {
+    printf("Integral não converge nesses valores");
+    return;
+  }
+  if (a < 0 && b < 0) {
+    a *= (-1);
+    b *= (-1);
+  }
+  printf("I = %f", (log(b) - log(a)));
+}
+
 void integrateXK(float k, float a, float b) {
+  if (k == -1) {
+    integrate1X(a, b);
+    return;
+  }
   if (k < 0 && a * b <= 0) {
     printf("Integral não converge neses valores");
     return;
@@ -27,18 +43,6 @@ void integrateXK(float k, float a, float b) {
   }
     printf("I = %f", (pow(b, (k+1))/(k+1)) - (pow(a, (k+1))/(k+1)));
 };
-
-void integrate1X(float a, float b) {
-  if (a * b <= 0) {
-    printf("Integral não converge nesses valores");
-    return;
-  }
-  if (a < 0 && b < 0) {
-    a *= (-1);
-    b *= (-1);
-  }
-  printf("I = %f", (log(b) - log(a)));
-}
 
 int main() {
   do {
