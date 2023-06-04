@@ -19,7 +19,7 @@ void integrate1X(float a, float b) {
     printf("Integral não converge nesses valores");
     return;
   }
-  if (a < 0 && b < 0) {
+  if (a < 0 && b < 0) { //módulo de A e B
     a *= (-1);
     b *= (-1);
   }
@@ -27,7 +27,7 @@ void integrate1X(float a, float b) {
 }
 
 void integrateXK(float k, float a, float b) {
-  if (k == -1) {
+  if (k == -1) { //caso k = -1, 1/x, devido a isso é necessário calcular log (b) - log(a);
     integrate1X(a, b);
     return;
   }
@@ -36,8 +36,8 @@ void integrateXK(float k, float a, float b) {
     return;
   }
   if (a < 0 && b < 0 && k < 0) {
-    a = 1/((-k - 1) * (pow(-a, -k - 1)));
-    b = 1/((-k - 1) * (pow(-b, -k - 1)));
+    a = 1/-((-k - 1) * (pow(a, -k - 1))); // x^-3 == 1/-(2x^2), devido a isso -k, o valor se torna positivo, quero esse valor -1
+    b = 1/-((-k - 1) * (pow(b, -k - 1)));  
     printf("I = %f",  b-a);
     return;
   }
