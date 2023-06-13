@@ -36,7 +36,7 @@ void integrateXK(float k, float a, float b) {
     return;
   }
   if (a < 0 && b < 0 && k < 0) {
-    a = 1/-((-k - 1) * (pow(a, -k - 1))); // x^-3 == 1/-(2x^2), devido a isso -k, o valor se torna positivo, quero esse valor -1 ... -(-3) - 1
+    a = 1/-((-k - 1) * (pow(a, -k - 1))); // x^-3 == 1/-(2x^2), devido a isso -k, o valor se torna positivo, quero esse valor -1
     b = 1/-((-k - 1) * (pow(b, -k - 1)));  
     printf("I = %f",  b-a);
     return;
@@ -62,17 +62,17 @@ int main() {
     switch (escolha) {
     case 1:
       printf("Informe o valor de K\n");
-      while (scanf("%d", &k) != 1) {
+      while (scanf("%f", &k) != 1) {
         printf("Entrada inválida. Por favor, digite um valor numérico: \n");
         while (getchar() != '\n');
       }
       printf("Informe o valor de A\n");
-      while (scanf("%d", &a) != 1) {
+      while (scanf("%f", &a) != 1) {
         printf("Entrada inválida. Por favor, digite um valor numérico: \n");
         while (getchar() != '\n');
       }
       printf("Informe o valor de B\n");
-      while (scanf("%d", &b) != 1) {
+      while (scanf("%f", &b) != 1) {
         printf("Entrada inválida. Por favor, digite um valor numérico: \n");
         while (getchar() != '\n');
       }
@@ -80,12 +80,12 @@ int main() {
       break;
     case 2:
       printf("Informe o valor de A\n");
-      while (scanf("%d", &a) != 1) {
+      while (scanf("%f", &a) != 1) {
         printf("Entrada inválida. Por favor, digite um valor numérico: \n");
         while (getchar() != '\n');
       }
       printf("Informe o valor de B\n");
-      while (scanf("%d", &b) != 1) {
+      while (scanf("%f", &b) != 1) {
         printf("Entrada inválida. Por favor, digite um valor numérico: \n");
         while (getchar() != '\n');
       } 
