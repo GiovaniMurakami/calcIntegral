@@ -28,7 +28,7 @@ void integrate1X(float a, float b) {
 
 void integrateXK(float k, float a, float b) {
   int aux = k;
-  if (k != aux && k >= 0 && a < 0 || b < 0) {
+  if (k != aux && k > 0 && a < 0 || b < 0) {
     printf("Integral não definida com k positivo e decimal e x < 0");
     return;
   }
