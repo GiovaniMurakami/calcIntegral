@@ -27,8 +27,16 @@ void integrate1X(float a, float b) {
 }
 
 void integrateXK(float k, float a, float b) {
+  int aux = k;
+  if (k != aux && a < 0 || b < 0) {
+    printf("Integral não definida com k positivo e decimal e x < 0");
+    return;
+  }
   if (k == -1) { //caso k = -1, 1/x, devido a isso é necessário calcular log (b) - log(a);
-    integrate1X(a, b);
+    //integrate1X(a, b);
+
+    printf("Integral não definida com k = -1!");
+    
     return;
   }
   if (k < 0 && a * b <= 0) {
